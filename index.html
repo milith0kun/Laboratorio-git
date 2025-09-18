@@ -3,73 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Web - Laboratorio Git</title>
+    <meta name="description" content="Proyecto web educativo para aprender Git, GitHub y desarrollo web colaborativo. Incluye ejemplos prácticos y mejores prácticas.">
+    <meta name="keywords" content="Git, GitHub, desarrollo web, programación, control de versiones, colaboración">
+    <meta name="author" content="Edmil Saire - Laboratorio Git">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Proyecto Web - Laboratorio Git">
+    <meta property="og:description" content="Aprende Git y GitHub con este proyecto web interactivo">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    
+    <title>Proyecto Web - Laboratorio Git | Edmil Saire</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Botón de accesibilidad para saltar al contenido principal -->
+    <a href="#main-content" class="skip-link" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+    
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
             <div class="logo">
-                <h1>Mi Proyecto Web</h1>
+                <h1>
+                    <span class="logo-icon" aria-hidden="true">🚀</span>
+                    Mi Proyecto Web
+                </h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" aria-label="Ir a la sección de inicio">Inicio</a></li>
+                <li><a href="#acerca" aria-label="Ir a la sección acerca del proyecto">Acerca</a></li>
+                <li><a href="#servicios" aria-label="Ir a la sección de servicios">Servicios</a></li>
+                <li><a href="#estadisticas" aria-label="Ir a la sección de estadísticas">Estadísticas</a></li>
+                <li><a href="#contacto" aria-label="Ir a la sección de contacto">Contacto</a></li>
             </ul>
+            <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
+    <main id="main-content" role="main">
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h2>Bienvenido a Mi Proyecto Web</h2>
-                <p>Este es un proyecto de ejemplo para demostrar el uso de Git y GitHub</p>
-                <button class="cta-button">Comenzar</button>
+                <h2 id="hero-title">Bienvenido a Mi Proyecto Web</h2>
+                <p class="hero-subtitle">Este es un proyecto de ejemplo para demostrar el uso de Git y GitHub en desarrollo web colaborativo</p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" aria-describedby="cta-description">
+                        <span class="button-icon" aria-hidden="true">▶️</span>
+                        Comenzar Exploración
+                    </button>
+                    <button class="cta-button secondary" onclick="showGitInfo()" aria-label="Ver información de Git">
+                        <span class="button-icon" aria-hidden="true">📊</span>
+                        Ver Info Git
+                    </button>
+                </div>
+                <p id="cta-description" class="sr-only">Explora las funcionalidades del proyecto y aprende sobre Git</p>
+            </div>
+            <div class="hero-animation" aria-hidden="true">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
             </div>
         </section>
 
-        <section id="acerca" class="about">
+        <section id="acerca" class="about" aria-labelledby="about-title">
             <div class="container">
-                <h2>Acerca del Proyecto</h2>
-                <p>Este proyecto web fue creado como parte del laboratorio de Git para aprender:</p>
-                <ul>
-                    <li>Inicialización de repositorios</li>
-                    <li>Conexión con GitHub</li>
-                    <li>Commits y push de cambios</li>
-                    <li>Colaboración en proyectos</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="servicios" class="services">
-            <div class="container">
-                <h2>Servicios</h2>
-                <div class="service-grid">
-                    <div class="service-card">
-                        <h3>Desarrollo Web</h3>
-                        <p>Creación de sitios web modernos y responsivos</p>
+                <h2 id="about-title">Acerca del Proyecto</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">Este proyecto web fue creado como parte del laboratorio de Git para aprender las mejores prácticas de desarrollo colaborativo.</p>
+                        <div class="learning-objectives">
+                            <h3>Objetivos de Aprendizaje:</h3>
+                            <ul role="list">
+                                <li role="listitem">
+                                    <span class="objective-icon" aria-hidden="true">🔧</span>
+                                    <strong>Inicialización de repositorios:</strong> Configuración y setup inicial
+                                </li>
+                                <li role="listitem">
+                                    <span class="objective-icon" aria-hidden="true">🔗</span>
+                                    <strong>Conexión con GitHub:</strong> Integración con plataformas remotas
+                                </li>
+                                <li role="listitem">
+                                    <span class="objective-icon" aria-hidden="true">💾</span>
+                                    <strong>Commits y push de cambios:</strong> Gestión de versiones
+                                </li>
+                                <li role="listitem">
+                                    <span class="objective-icon" aria-hidden="true">👥</span>
+                                    <strong>Colaboración en proyectos:</strong> Trabajo en equipo efectivo
+                                </li>
+                                <li role="listitem">
+                                    <span class="objective-icon" aria-hidden="true">🌿</span>
+                                    <strong>Manejo de ramas:</strong> Desarrollo paralelo y merge
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Control de Versiones</h3>
-                        <p>Gestión de proyectos con Git y GitHub</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Colaboración</h3>
-                        <p>Trabajo en equipo en proyectos de desarrollo</p>
+                    <div class="about-visual" aria-hidden="true">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                            </div>
+                            <div class="code-content">
+                                <code>git init<br>git add .<br>git commit -m "Initial commit"<br>git push origin main</code>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="servicios" class="services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title">Servicios y Tecnologías</h2>
+                <p class="section-subtitle">Explora las diferentes áreas de conocimiento que abarca este proyecto</p>
+                <div class="service-grid">
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">🌐</div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios web modernos y responsivos utilizando las mejores prácticas de HTML5, CSS3 y JavaScript</p>
+                        <ul class="service-features">
+                            <li>Diseño responsive</li>
+                            <li>Optimización SEO</li>
+                            <li>Accesibilidad web</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">🔄</div>
+                        <h3>Control de Versiones</h3>
+                        <p>Gestión profesional de proyectos con Git y GitHub, incluyendo workflows colaborativos</p>
+                        <ul class="service-features">
+                            <li>Branching strategies</li>
+                            <li>Pull requests</li>
+                            <li>Code reviews</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">👥</div>
+                        <h3>Colaboración</h3>
+                        <p>Trabajo en equipo efectivo en proyectos de desarrollo con metodologías ágiles</p>
+                        <ul class="service-features">
+                            <li>Scrum/Kanban</li>
+                            <li>Pair programming</li>
+                            <li>Code standards</li>
+                        </ul>
+                    </article>
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h3>Optimización</h3>
+                        <p>Mejora del rendimiento y experiencia de usuario mediante técnicas avanzadas</p>
+                        <ul class="service-features">
+                            <li>Performance tuning</li>
+                            <li>Lazy loading</li>
+                            <li>Code splitting</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="estadisticas" class="stats" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 id="stats-title">Estadísticas del Proyecto</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Commits Realizados</div>
+                        <div class="stat-icon" aria-hidden="true">📝</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Colaboradores</div>
+                        <div class="stat-icon" aria-hidden="true">👨‍💻</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Ramas Activas</div>
+                        <div class="stat-icon" aria-hidden="true">🌿</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Horas de Desarrollo</div>
+                        <div class="stat-icon" aria-hidden="true">⏰</div>
+                    </div>
+                </div>
+                <button class="stats-refresh-btn" onclick="showProjectStats()" aria-label="Actualizar estadísticas del proyecto">
+                    <span aria-hidden="true">🔄</span>
+                    Actualizar Estadísticas
+                </button>
+            </div>
+        </section>
     </main>
 
-    <footer id="contacto">
+    <footer id="contacto" role="contentinfo">
         <div class="container">
-            <p>&copy; 2024 Proyecto Web - Laboratorio Git. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Proyecto Web - Laboratorio Git</h3>
+                    <p>Desarrollado por <strong>Edmil Saire</strong> como parte del aprendizaje de Git y GitHub.</p>
+                    <div class="social-links" role="list">
+                        <a href="https://github.com/milith0kun/Laboratorio-git" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto en GitHub">
+                            <span aria-hidden="true">📂</span> GitHub
+                        </a>
+                        <a href="#" aria-label="Contactar por email">
+                            <span aria-hidden="true">📧</span> Email
+                        </a>
+                        <a href="#" aria-label="Ver perfil de LinkedIn">
+                            <span aria-hidden="true">💼</span> LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <nav role="navigation" aria-label="Enlaces del pie de página">
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#acerca">Acerca</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#estadisticas">Estadísticas</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Tecnologías Utilizadas</h4>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Git</span>
+                        <span class="tech-badge">GitHub</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Proyecto Web - Laboratorio Git. Desarrollado con ❤️ para el aprendizaje.</p>
+                <p class="version-info">
+                    <span>Versión: 2.0</span> | 
+                    <span>Rama: Edmil-Saire</span> | 
+                    <span id="last-updated">Última actualización: <time datetime="2024-01-15">15 de Enero, 2024</time></span>
+                </p>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
+    
+    <!-- Botón de regreso al inicio -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver al inicio de la página" title="Volver arriba">
+        <span aria-hidden="true">↑</span>
+    </button>
 </body>
 </html>
