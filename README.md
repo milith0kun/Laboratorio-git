@@ -93,7 +93,7 @@ git clone <url>                                   # Clonar repositorio
 
 ## 📄 Licencia
 
-Este proyecto es de uso educativo para el laboratorio de Git.
+Este proyecto es de uso educativo para el laboratorio de Git Hub.
 
 ## 👨‍💻 Autor
 
