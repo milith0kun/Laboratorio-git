@@ -1,5 +1,7 @@
 # Proyecto Web - Laboratorio Git
 
+Actualización mínima realizada el 17/09/2025.
+
 Este es un proyecto de ejemplo creado para demostrar el uso de Git y GitHub en el desarrollo web.
 
 ## 📁 Estructura del Proyecto

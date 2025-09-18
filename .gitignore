@@ -1,0 +1,10 @@
+# Archivos y carpetas ignorados por Git
+node_modules/
+*.log
+.env
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.bak
