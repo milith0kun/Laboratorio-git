@@ -77,13 +77,8 @@ git clone <url>                                   # Clonar repositorio
 
 ## 🎯 Objetivos de Aprendizaje
 
-- [x] Inicializar un repositorio Git
-- [x] Conectar repositorio local con GitHub
-- [x] Crear archivos de proyecto web
-- [x] Realizar commits y push
-- [x] Documentar el proyecto
 
-## 🤝 Contribuir
+Actualización mínima realizada el 17/09/2025 (rama Edmil-Saire).
 
 1. Fork el proyecto
 2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
